@@ -6,6 +6,7 @@ import 'package:mealin/features/recipe_details/presentation/view/widgets/calorie
 import 'package:mealin/features/recipe_details/presentation/view/widgets/ingredients_builder.dart';
 import 'package:mealin/features/recipe_details/presentation/view/widgets/instruction_builder.dart';
 import 'package:mealin/features/recipe_details/presentation/view/widgets/recipe_details_app_bar.dart';
+import 'package:mealin/features/recipe_details/presentation/view/widgets/selection_details.dart';
 
 class RecipeDetails extends StatelessWidget {
   const RecipeDetails({super.key, required this.recipe});
@@ -29,32 +30,33 @@ class RecipeDetails extends StatelessWidget {
                 iconColor: Colors.amber,
               ),
             ),
-            CaloriesServingTimeBuilder(
-              caloriesValue: recipe.caloriesPerServing!,
-              servingValue: recipe.servings!,
-              timeValue: recipe.cookTimeMinutes!,
-            ),
-            const Text(
-              'Ingredients',
-              style: Styles.textStyle20,
-            ),
-            IngredientsBuilder(
-              recipeModel: recipe,
-            ),
-            const Padding(
-              padding: EdgeInsets.only(left: 16, top: 5),
-              child: Text(
-                'Instructions',
-                style: Styles.textStyle30,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16),
-              child: InstructionsBuilder(recipeModel: recipe,),
-            ),
-            const SizedBox(
-              height: 10,
-            )
+            SelectionDetails(recipe: recipe,)
+            // CaloriesServingTimeBuilder(
+            //   caloriesValue: recipe.caloriesPerServing!,
+            //   servingValue: recipe.servings!,
+            //   timeValue: recipe.cookTimeMinutes!,
+            // ),
+            // const Text(
+            //   'Ingredients',
+            //   style: Styles.textStyle20,
+            // ),
+            // IngredientsBuilder(
+            //   recipeModel: recipe,
+            // ),
+            // const Padding(
+            //   padding: EdgeInsets.only(left: 16, top: 5),
+            //   child: Text(
+            //     'Instructions',
+            //     style: Styles.textStyle30,
+            //   ),
+            // ),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 16),
+            //   child: InstructionsBuilder(recipeModel: recipe,),
+            // ),
+            // const SizedBox(
+            //   height: 10,
+            // )
           ],
         ),
       ),
