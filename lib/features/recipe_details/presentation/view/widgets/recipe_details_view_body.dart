@@ -26,7 +26,6 @@ class RecipeDetailsViewBody extends StatelessWidget {
           ),
         ]),
         Expanded(
-    
           child: RecipeDetails(
             recipe: recipe,
           ),

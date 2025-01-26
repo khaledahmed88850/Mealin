@@ -31,7 +31,7 @@ class _SelectionDetailsState extends State<SelectionDetails>
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height *0.45,
+      height: MediaQuery.of(context).size.height *0.50,
       child: Column(
         children: [
           TabBar(
@@ -53,7 +53,7 @@ class _SelectionDetailsState extends State<SelectionDetails>
                   text: 'Instructions',
                 ),
               ]),
-              const SizedBox(height: 10,),
+             
           Expanded(
             child: TabBarView(controller: _tabController, children: [
               Align(

@@ -8,6 +8,7 @@ class InstructionsBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: EdgeInsets.all(8),
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: recipeModel.instructions!.length,
