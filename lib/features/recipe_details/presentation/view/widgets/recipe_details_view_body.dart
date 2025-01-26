@@ -13,7 +13,7 @@ class RecipeDetailsViewBody extends StatelessWidget {
       children: [
         Stack(children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.42,
+            height: MediaQuery.of(context).size.height * 0.44,
             child: CustomRecipeImage(
               imageUrl: recipe.image!,
               aspectRatio: 1.2,

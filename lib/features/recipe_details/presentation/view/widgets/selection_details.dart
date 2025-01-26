@@ -53,7 +53,7 @@ class _SelectionDetailsState extends State<SelectionDetails>
                   text: 'Instructions',
                 ),
               ]),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
           Expanded(
             child: TabBarView(controller: _tabController, children: [
               Align(

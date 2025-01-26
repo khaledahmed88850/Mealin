@@ -6,11 +6,9 @@ import 'package:mealin/features/category/presentation/view/widgets/food_item_car
 import 'package:mealin/features/home/data/manager/cubit/recipes_by_category_cubit/recipes_by_category_cubit.dart';
 
 class RecipeTypeItemsListViewBuilder extends StatelessWidget {
-  const RecipeTypeItemsListViewBuilder({super.key, });
-
-
-  @override
-
+  const RecipeTypeItemsListViewBuilder({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<RecipesByCategoryCubit, RecipesByCategoryState>(
@@ -26,25 +24,26 @@ class RecipeTypeItemsListViewBuilder extends StatelessWidget {
                   child: FoodItemCard(
                       recipe: state.recipes[index],
                       onPressed: () {
-                        GoRouter.of(context)
-                            .push(AppRouters.kRecipeDetailsView , extra: state.recipes[index]);
+                        GoRouter.of(context).push(AppRouters.kRecipeDetailsView,
+                            extra: state.recipes[index]);
                       },
                       aspectRatio: 1.9),
                 ),
               );
             },
           );
-        }
-        else if (state is RecipesByCategoryLoading)
-        {
-          return const Center(child:  CircularProgressIndicator( strokeAlign: 5,));
-        }
-        else if (state is RecipesByCategoryFailure)
-        {
-          return Center(child: Text(state.errMesage , style: const TextStyle(color: Colors.black , fontSize: 30),));
-        }
-        else 
-        {
+        } else if (state is RecipesByCategoryLoading) {
+          return const Center(
+              child: CircularProgressIndicator(
+            strokeAlign: 5,
+          ));
+        } else if (state is RecipesByCategoryFailure) {
+          return Center(
+              child: Text(
+            state.errMesage,
+            style: const TextStyle(color: Colors.black, fontSize: 30),
+          ));
+        } else {
           return const Text('');
         }
       },

@@ -14,17 +14,21 @@ class CustomNavigationBar extends StatefulWidget {
 
 class _CustomNavigationBarState extends State<CustomNavigationBar> {
   int selectedIndex = 0;
+  int index = 0;
   @override
   Widget build(BuildContext context) {
     return NavigationBar(
         onDestinationSelected: (value) {
+
           selectedIndex = value;
+      
           if (selectedIndex == 1) {
             GoRouter.of(context).push(AppRouters.kSearchView);
           }
+    
           setState(() {});
         },
-        selectedIndex: 0,
+        selectedIndex: index,
         indicatorColor: kPrimaryColor,
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
@@ -32,7 +36,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
             icon: Icon(Icons.search),
             label: 'Search',
           ),
-          NavigationDestination(icon: Icon(Icons.favorite), label: 'Favorites'),
+      
         ]);
   }
 }

@@ -7,11 +7,9 @@ class RecipeDetailsView extends StatelessWidget {
   final RecipeModel? recipe;
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: RecipeDetailsViewBody(
-          recipe: recipe!,
-        ),
+    return Scaffold(
+      body: RecipeDetailsViewBody(
+        recipe: recipe!,
       ),
     );
   }
