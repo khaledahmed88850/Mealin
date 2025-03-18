@@ -1,16 +1,23 @@
-# mealin
+# Mealin - Recipe App
 
-A new Flutter project.
+Mealin is a beautifully designed Flutter application that helps users discover and cook delicious recipes. Whether you're a beginner or a seasoned chef, Mealin offers a wide variety of recipes with step-by-step instructions, ingredient lists, and cooking tips.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **Recipe Discovery**: Browse thousands of recipes across various categories (e.g., breakfast, lunch, dinner, desserts).
+- **Search Functionality**: Easily search for recipes by name, ingredients, or cuisine.
+- **Recipe Details**: View detailed instructions, ingredient lists, and cooking tips for each recipe.
+- **Responsive Design**: Optimized for both mobile and tablet devices.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
+ ![recipes1](https://github.com/user-attachments/assets/5a713e55-6d6e-4b6f-abc6-39959bbd1d23) | ![recipes](https://github.com/user-attachments/assets/f41f1a93-bd6f-49e1-97d5-07d4c3c3a9dc) | ![recipe3](https://github.com/user-attachments/assets/6ed4b312-f126-40eb-801f-f2e268bfedb4) | ![recipe2](https://github.com/user-attachments/assets/07fb25f2-1812-4107-85ca-0cada87ddc62) | ![search](https://github.com/user-attachments/assets/ec7c9a69-c4b8-47a9-a50f-edb182dc8039)
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+*Splash Screen* |*Home Screen* | *Category Screen* | *Recipe Details Screen* | *Search*
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Technologies Used
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Frontend**: Flutter (Dart)
+- **State Management**: Cubit
+- **API Integration**: RESTful APIs for recipe data
+- **Version Control**: Git
+- **Architecture**: Clean Architecture
